@@ -28,10 +28,11 @@ pipeline {
                 PROJECT_KEY = "DharmeshGit30_DeclarativeCI-CD"
             }
             steps {
-              withSonarQubeEnv('Sonar-Cloud') {
-                sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=$ORGANIZATION \
-                -Dsonar.projectKey=$PROJECT_KEY  
-                -Dsonar.java.binaries=target/classes/com/example/helloworld'''
+//              withSonarQubeEnv('Sonar-Cloud') {
+//                sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.organization=$ORGANIZATION \
+//                -Dsonar.projectKey=$PROJECT_KEY  
+//                -Dsonar.java.binaries=target/classes/com/example/helloworld'''
+                  sh 'mvn verify sonar:sonar'
               }
             }
         } 

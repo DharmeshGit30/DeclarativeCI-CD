@@ -25,7 +25,7 @@ pipeline {
             environment {
                 SCANNER_HOME = tool 'SonarQubeScanner'
                 ORGANIZATION = "dharmeshgit30"
-                PROJECT_KEY = "DharmeshGit30_simple-java-maven-app"
+                PROJECT_KEY = "DharmeshGit30_DeclarativeCI-CD"
             }
             steps {
               withSonarQubeEnv('Sonar-Cloud') {
